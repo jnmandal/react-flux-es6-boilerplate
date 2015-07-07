@@ -10,15 +10,18 @@ module.exports = {
     filename: 'app.js',
     path: __dirname + '/build'
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: path.join(__dirname, 'src'),
         loaders: ['react-hot', 'babel-loader']
       },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: path.join(__dirname, 'src'),
         loaders: ['babel-loader']
       },
