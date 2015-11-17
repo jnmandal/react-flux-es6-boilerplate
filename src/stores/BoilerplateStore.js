@@ -15,7 +15,7 @@ class BoilerplateStore extends EventEmitter {
     this.on('CHANGE', cb);
   }
   removeChangeListener(cb) {
-    this.removeChangeListener('CHANGE', cb);
+    this.removeListener('CHANGE', cb);
   }
 }
 
